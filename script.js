@@ -412,9 +412,14 @@ function generateOrderSummary() {
 async function handleOrderSubmit(e) {
     e.preventDefault();
     
+    const fullName = (document.getElementById('fullName')?.value || '').trim();
     const phone = document.getElementById('phone').value;
     const notes = document.getElementById('notes').value;
     
+    if (!fullName) {
+        showError('Veuillez entrer votre nom complet');
+        return;
+    }
     if (!phone) {
         showError('Veuillez entrer votre numéro de téléphone');
         return;
@@ -426,6 +431,7 @@ async function handleOrderSubmit(e) {
         
         // Sauvegarder la commande
         const orderData = {
+            fullName: fullName,
             phone: phone,
             notes: notes,
             items: [...cart], // Copie du panier
@@ -444,7 +450,7 @@ async function handleOrderSubmit(e) {
         console.log('✅ Commande sauvegardée:', newOrder);
         
         // Génération du message WhatsApp
-        const message = generateWhatsAppMessage(phone, notes);
+        const message = generateWhatsAppMessage(fullName, phone, notes);
         const whatsappUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
         
         // Ouverture de WhatsApp
@@ -468,10 +474,11 @@ async function handleOrderSubmit(e) {
 }
 
 // Génération du message WhatsApp pour les commandes
-function generateWhatsAppMessage(phone, notes) {
+function generateWhatsAppMessage(fullName, phone, notes) {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
     let message = `🛍️ *NOUVELLE COMMANDE DGN COLLECTION*\n\n`;
+    if (fullName) message += `👤 *Nom:* ${fullName}\n`;
     message += `📱 *Téléphone:* ${phone}\n\n`;
     message += `📋 *Articles commandés:*\n`;
     
@@ -917,7 +924,7 @@ function renderProducts() {
                 <p class="product-description">${p.description || ''}</p>
                 <div class="product-meta">
                     <span class="product-price">${formatPrice(p.price)} DA</span>
-                    <button class="add-to-cart-btn" data-id="${p.id}">Ajouter</button>
+                    <button class="add-to-cart-btn" data-id="${p.id}">Ajouter au panier</button>
                 </div>
             </div>
         </div>
