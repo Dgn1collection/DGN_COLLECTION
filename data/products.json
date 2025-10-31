@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Chemise Homme Classique",
+      "description": "Chemise en coton premium pour homme, coupe moderne et élégante.",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop&auto=format",
+      "color": "Beige",
+      "available": true,
+      "category": "Homme",
+      "stock": 35
+    },
+    {
+      "id": 2,
+      "name": "Pantalon Homme Chino",
+      "description": "Pantalon chino en coton stretch, confortable et stylé.",
+      "price": 2800,
+      "image": "https://images.unsplash.com/photo-1520975922284-7b4e5a3d8f5d?w=400&h=400&fit=crop&auto=format",
+      "color": "Beige",
+      "available": true,
+      "category": "Homme",
+      "stock": 25
+    },
+    {
+      "id": 3,
+      "name": "Veste Homme Blazer",
+      "description": "Blazer moderne pour homme, parfait pour le bureau et les sorties.",
+      "price": 5500,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format",
+      "color": "Gris",
+      "available": true,
+      "category": "Homme",
+      "stock": 18
+    },
+    {
+      "id": 4,
+      "name": "Robe Femme Été",
+      "description": "Robe légère et fluide pour femme, parfaite pour l'été.",
+      "price": 2400,
+      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=400&fit=crop&auto=format",
+      "color": "Rose",
+      "available": true,
+      "category": "Femme",
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "name": "Top Femme Décontracté",
+      "description": "Top en coton bio pour femme, style décontracté et confortable.",
+      "price": 1800,
+      "image": "https://images.unsplash.com/photo-1571513720906-8dd4b8165981?w=400&h=400&fit=crop&auto=format",
+      "color": "Blanc",
+      "available": true,
+      "category": "Femme",
+      "stock": 40
+    },
+    {
+      "id": 6,
+      "name": "Jupe Femme Midi",
+      "description": "Jupe midi élégante pour femme, idéale pour toutes les occasions.",
+      "price": 2200,
+      "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&auto=format",
+      "color": "Noir",
+      "available": true,
+      "category": "Femme",
+      "stock": 22
+    },
+    {
+      "id": 7,
+      "name": "T-shirt Enfant Garçon",
+      "description": "T-shirt coloré pour enfant garçon, coton doux et résistant.",
+      "price": 1200,
+      "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop&auto=format",
+      "color": "Rouge",
+      "available": true,
+      "category": "Enfant",
+      "stock": 50
+    },
+    {
+      "id": 8,
+      "name": "Robe Enfant Fille",
+      "description": "Robe adorable pour petite fille, design mignon et confortable.",
+      "price": 1500,
+      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=400&fit=crop&auto=format",
+      "color": "Rose",
+      "available": true,
+      "category": "Enfant",
+      "stock": 35
+    },
+    {
+      "id": 9,
+      "name": "Short Enfant Mixte",
+      "description": "Short en coton pour enfant, parfait pour jouer et s'amuser.",
+      "price": 1000,
+      "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop&auto=format",
+      "color": "Bleu",
+      "available": true,
+      "category": "Enfant",
+      "stock": 45
+    }
+  ],
+  "lastUpdated": "2024-01-15T10:00:00.000Z"
+}

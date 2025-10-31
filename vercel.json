@@ -1,0 +1,29 @@
+{
+  "headers": [
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/(script|styles)\.(js|css)",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=0, s-maxage=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/data/(.*)\\.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}
+

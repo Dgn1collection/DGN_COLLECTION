@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDG Collection - E-commerce Moderne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/logo.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/logo.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/logo.png" sizes="48x48" type="image/png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <meta name="theme-color" content="#001f3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="NDG Collection">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="twitter:image" content="images/logo.png">
+</head>
+<body>
+    <!-- Header avec logo et navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                   <img src="images/logo.png" alt="DGN Collection Logo" class="logo-image" onerror="this.style.display='none'">
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#products" class="nav-link">Produits</a></li>
+                    <li><a href="#ads" class="nav-link">Annonces</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 18C5.9 18 5.01 18.9 5.01 20S5.9 22 7 22 8.99 21.1 8.99 20 8.1 18 7 18ZM1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5H5.21L4.27 3H1V2ZM17 18C15.9 18 15.01 18.9 15.01 20S15.9 22 17 22 18.99 21.1 18.99 20 18.1 18 17 18Z" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                
+                <div class="social-links">
+                    <a href="https://instagram.com/ndgcollection" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/213790913094" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main class="main">
+        <!-- Section d'accueil -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <img src="https://www.wsbconceptdemagasin.fr/wp-content/uploads/2018/04/Anna_van_Toor_029-kopi--ren.jpg" alt="NDG Collection Hero" class="hero-image">
+                <video class="hero-video" style="display: none;" muted loop autoplay>
+                    <!-- Les vidéos seront chargées dynamiquement -->
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="hero-logo-icon">
+                        <img src="images/logo.png" alt="DGN Collection Logo" class="logo-image" onerror="this.style.display='none'">
+                    </div>
+                    <div class="hero-logo-text">
+                        <h1>DGN</h1>
+                        <span>COLLECTION</span>
+                    </div>
+                </div>
+                <h2 class="hero-title">Bienvenue chez DGN Collection</h2>
+                <p class="hero-subtitle">Découvrez notre collection exclusive de produits de qualité exceptionnelle</p>
+                <div class="hero-buttons">
+                    <button class="cta-btn primary" onclick="scrollToSection('products')">
+                        Découvrir nos produits
+                    </button>
+                    <button class="cta-btn secondary" onclick="scrollToSection('about')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section produits -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Nos Produits</h2>
+                
+                <!-- Filtres par catégorie -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">Tous</button>
+                    <button class="filter-btn" data-category="Homme">Homme</button>
+                    <button class="filter-btn" data-category="Femme">Femme</button>
+                    <button class="filter-btn" data-category="Enfant">Enfant</button>
+                    <button class="refresh-btn" onclick="reloadData()" title="Recharger les données">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 12a8 8 0 018-8V2.5L16 6l-4 3.5V8a6 6 0 00-6 6h2a4 4 0 014-4v-2a8 8 0 018 8h-2a6 6 0 00-6-6v2a4 4 0 014 4h-2z" fill="currentColor"/>
+                        </svg>
+                        Actualiser
+                    </button>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Les produits seront chargés dynamiquement depuis JSON -->
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Chargement des produits...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section annonces -->
+        <section id="ads" class="ads-section">
+            <div class="container">
+                <div class="ads-contact-grid">
+                    <!-- Annonces -->
+                    <div class="ads-container">
+                        <div class="ads-header">
+                            <h2 class="section-title">Nos Offres</h2>
+                            <button class="refresh-btn-small" onclick="refreshAds()" title="Actualiser les annonces">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 12a8 8 0 018-8V2.5L16 6l-4 3.5V8a6 6 0 00-6 6h2a4 4 0 014-4v-2a8 8 0 018 8h-2a6 6 0 00-6-6v2a4 4 0 014 4h-2z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="ad-slide active" id="adSlide">
+                            <!-- double layer images for crossfade -->
+                            <img id="adImageA" src="" alt="Annonce" class="ad-image ad-image-a">
+                            <img id="adImageB" src="" alt="Annonce" class="ad-image ad-image-b">
+                            <div class="ad-content">
+                                <h3 id="adTitle" class="ad-title"></h3>
+                                <p id="adDescription" class="ad-description"></p>
+                            </div>
+                        </div>
+                        <div class="ad-indicators" id="adIndicators">
+                            <span class="ad-dot active" data-ad="0"></span>
+                            <span class="ad-dot" data-ad="1"></span>
+                            <span class="ad-dot" data-ad="2"></span>
+                            <span class="ad-dot" data-ad="3"></span>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire de contact -->
+                    <div class="contact-form-container">
+                        <h2 class="section-title">Contactez-nous</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Nom complet</label>
+                                <input type="text" id="contactName" name="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Téléphone</label>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="+213 790 91 30 94" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Sujet</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Choisir un sujet</option>
+                                    <option value="commande">Commande</option>
+                                    <option value="livraison">Livraison</option>
+                                    <option value="retour">Retour/Échange</option>
+                                    <option value="question">Question produit</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="message" placeholder="Votre message..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="contact-submit-btn">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section à propos -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">À Propos de DGN Collection</h2>
+                <div class="about-content">
+                    <p>DGN Collection est votre destination privilégiée pour des produits de qualité exceptionnelle. Nous nous engageons à vous offrir une expérience d'achat unique avec des articles soigneusement sélectionnés.</p>
+                    <p>Notre mission est de vous accompagner dans vos choix avec des produits qui allient style, qualité et accessibilité.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section contact -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contactez-nous</h2>
+                <div class="contact-content">
+                    <p>Pour toute question ou information, n'hésitez pas à nous contacter :</p>
+                    <div class="contact-info">
+                        <a href="https://wa.me/213790913094" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
+                            </svg>
+                            +213 790 91 30 94
+                        </a>
+                        <a href="https://instagram.com/ndgcollection" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                            </svg>
+                            @ndgcollection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                             <img src="images/logo.png" alt="DGN Collection Logo" class="logo-image" onerror="this.style.display='none'">
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>DGN</h3>
+                            <span>COLLECTION</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Votre destination privilégiée pour des produits de qualité exceptionnelle. 
+                        Style, qualité et accessibilité réunis.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@dgncollection" target="_blank" class="social-icon tiktok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/dgncollection" target="_blank" class="social-icon facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/dgncollection" target="_blank" class="social-icon instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/213790913094" target="_blank" class="social-icon whatsapp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 DGN Collection. Tous droits réservés.</p>
+                        <p>Fait avec ❤️ en Algérie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier latéral -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mon Panier</h3>
+            <button class="close-cart" id="closeCart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Les articles du panier seront ajoutés ici -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: <span id="cartTotal">0 DA</span></span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Commander</button>
+        </div>
+    </div>
+
+    <!-- Overlay pour le panier -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Modal de commande -->
+    <div class="order-modal" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Finaliser la commande</h3>
+                <button class="close-modal" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary" id="orderSummary">
+                    <!-- Résumé de la commande -->
+                </div>
+                <form class="order-form" id="orderForm">
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+213 790 91 30 94" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Notes (optionnel)</label>
+                        <textarea id="notes" name="notes" placeholder="Instructions spéciales..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-order-btn">Envoyer la commande via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay pour la modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+<script src="script.js?v=10"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{
+  "ads": [
+    {
+      "id": 1,
+      "title": "Nouvelle Collection Hiver",
+      "description": "Découvrez notre nouvelle collection d'hiver avec des prix imbattables !",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&auto=format&brightness=1.2&contrast=1.1",
+      "link": "#products",
+      "active": true,
+      "duration": 5000,
+      "type": "image"
+    },
+    {
+      "id": 2,
+      "title": "Soldes d'Été",
+      "description": "Profitez de nos soldes d'été avec jusqu'à -50% sur tous les articles !",
+      "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&h=1080&fit=crop&auto=format",
+      "link": "#products",
+      "active": true,
+      "duration": 5000,
+      "type": "image"
+    },
+    {
+      "id": 3,
+      "title": "Collection Homme",
+      "description": "Découvrez notre nouvelle collection pour homme !",
+      "video": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      "link": "#products",
+      "active": true,
+      "duration": 5000,
+      "type": "video"
+    },
+    {
+      "id": 4,
+      "title": "Collection Femme",
+      "description": "Nouveautés mode femme disponibles maintenant !",
+      "video": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      "link": "#products",
+      "active": true,
+      "duration": 5000,
+      "type": "video"
+    },
+    {
+      "id": 5,
+      "title": "Livraison Gratuite",
+      "description": "Livraison gratuite pour toute commande supérieure à 5000 DA !",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&h=1080&fit=crop&auto=format",
+      "link": "#contact",
+      "active": true,
+      "duration": 5000,
+      "type": "image"
+    },
+    {
+      "id": 6,
+      "title": "Collection Enfant",
+      "description": "Vêtements colorés et confortables pour vos enfants !",
+      "video": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
+      "link": "#products",
+      "active": true,
+      "duration": 5000,
+      "type": "video"
+    }
+  ],
+  "settings": {
+    "autoRotate": true,
+    "rotationInterval": 5000,
+    "fadeTransition": true,
+    "transitionDuration": 1000
+  }
+}
