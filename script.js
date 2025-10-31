@@ -357,7 +357,15 @@ function toggleCart() {
 // Ouverture de la modal de commande
 function openOrderModal() {
     if (cart.length === 0) return;
-    
+    // Fermer le panier si ouvert avant d'afficher la modal
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    if (cartSidebar && cartSidebar.classList.contains('open')) {
+        cartSidebar.classList.remove('open');
+        if (cartOverlay) cartOverlay.classList.remove('active');
+        isCartOpen = false;
+    }
+
     const orderModal = document.getElementById('orderModal');
     const modalOverlay = document.getElementById('modalOverlay');
     const orderSummary = document.getElementById('orderSummary');
