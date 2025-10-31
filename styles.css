@@ -199,6 +199,9 @@ body {
     gap: 1rem;
     flex-shrink: 0;
     height: 70px;
+    position: relative;
+    z-index: 1100;
+    min-width: 72px;
 }
 
 .cart-btn {
@@ -215,7 +218,10 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
 }
+
+.cart-btn svg { width: 22px; height: 22px; display: block; }
 
 .cart-btn:hover {
     background: rgba(0, 31, 63, 0.05);
@@ -1862,6 +1868,10 @@ body {
         gap: 0.5rem;
         height: 70px;
         padding: 0.5rem 15px;
+    }
+    
+    .nav-link-hide-mobile {
+        display: none !important;
     }
     
     .logo {
