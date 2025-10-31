@@ -4,6 +4,10 @@ const CONFIG = {
     SITE_NAME: 'DGN Collection'
 };
 
+// Source des données: false = utiliser UNIQUEMENT les données intégrées dans ce script
+// true = essayer de charger data/*.json puis retomber sur les valeurs intégrées
+const LOAD_FROM_JSON = false;
+
 // État global de l'application
 let products = [];
 let ads = [];
@@ -18,30 +22,62 @@ let adsInterval = null;
 
 // Chargement des données depuis JSON avec repli sur les valeurs par défaut
 async function loadDataFromJSON() {
-    const ts = Date.now(); // anti-cache pour CDN
+    if (!LOAD_FROM_JSON) {
+        products = getDefaultProducts();
+        ads = getDefaultAds();
+        console.log('✅ Données intégrées utilisées (LOAD_FROM_JSON=false)');
+        return;
+    }
+    const ts = Date.now();
+    const random = Math.random().toString(36).substring(7);
     try {
         const origin = window.location.origin;
+        // Force le rechargement avec cache: 'reload' et headers
+        const fetchOptions = {
+            cache: 'no-store',
+            headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            }
+        };
+        
         const [productsRes, adsRes] = await Promise.all([
-            fetch(`${origin}/data/products.json?v=${ts}`, { cache: 'no-store' }),
-            fetch(`${origin}/data/ads.json?v=${ts}`, { cache: 'no-store' })
+            fetch(`${origin}/data/products.json?v=${ts}&r=${random}`, fetchOptions),
+            fetch(`${origin}/data/ads.json?v=${ts}&r=${random}`, fetchOptions)
         ]);
+        
         if (productsRes.ok) {
             const productsJson = await productsRes.json();
             products = Array.isArray(productsJson) ? productsJson : (productsJson.products || []);
+            console.log('✅ Produits chargés depuis JSON:', products.length, products.map(p => p.name));
         } else {
+            console.warn('⚠️ Produits JSON non disponible, utilisation par défaut');
             products = getDefaultProducts();
         }
+        
         if (adsRes.ok) {
             const adsJson = await adsRes.json();
             ads = Array.isArray(adsJson) ? adsJson : (adsJson.ads || []);
+            console.log('✅ Annonces chargées depuis JSON:', ads.length);
         } else {
+            console.warn('⚠️ Annonces JSON non disponible, utilisation par défaut');
             ads = getDefaultAds();
         }
-        if (!products || products.length === 0) products = getDefaultProducts();
-        if (!ads || ads.length === 0) ads = getDefaultAds();
-        console.log('✅ Données chargées', { produits: products.length, annonces: ads.length });
+        
+        if (!products || products.length === 0) {
+            console.warn('⚠️ Aucun produit trouvé, utilisation par défaut');
+            products = getDefaultProducts();
+        }
+        if (!ads || ads.length === 0) {
+            console.warn('⚠️ Aucune annonce trouvée, utilisation par défaut');
+            ads = getDefaultAds();
+        }
+        
+        console.log('✅ Données finales chargées', { produits: products.length, annonces: ads.length });
     } catch (e) {
-        console.warn('⚠️ Lecture JSON échouée, utilisation des données par défaut');
+        console.error('❌ Erreur de chargement JSON:', e);
+        console.warn('⚠️ Utilisation des données par défaut');
         products = getDefaultProducts();
         ads = getDefaultAds();
     }
